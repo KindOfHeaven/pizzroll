@@ -1,0 +1,188 @@
+.h-slider {
+	width: 100%;
+	height: 472px;
+	display: block;
+}
+.h-slide {
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    & > .h-container {
+    	@include flex(row, flex-end, flex-end);
+    }
+}
+
+.h-slide__marker {
+	width: 186px;
+	position: absolute;
+	top: 80px;
+	left: calc(50% - 93px);
+	z-index: 3;
+	height: 185px;
+	background: transparent url(../img/mark.png) center center no-repeat;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	@include flex(row, center, center);
+}
+.h-slide__flag {
+	width: 591px;
+	height: 371px;
+	background: transparent url(../img/flag.png) center center no-repeat;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	text-align: center;
+	z-index: 2;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.h-slide__flag-text {
+  	font-size: 4.43rem;
+  	margin-top: 40px;
+  	color: $white;
+  	font-weight: 300;
+  	text-transform: uppercase;
+  	& > span {
+  		font-size: 8.71rem;
+  		display: block;
+  		margin-top: -10px;
+  		font-weight: 400;
+  		color: rgb(247, 247, 247);
+  		font-family: "Days", map-get($font, family);
+  	}
+}
+.h-slide__marker-text {
+	font-weight: 400;
+  	font-size: 1.71rem;
+  	color: $white;
+  	line-height: 2rem;
+  	text-align: center;
+  	padding: 0 30px;
+  	font-family: "Days", map-get($font, family);
+}
+.h-slide__description {
+	padding: 0 40px;
+}
+.h-slide__title {
+  	font-size: 1.57rem;
+  	font-weight: 500;
+  	color: rgb(26, 26, 26);
+  	text-align: center;
+}
+.h-slide__info {
+	font-weight: 300;
+	text-align: center;
+  	font-size: 1.29rem;
+  	margin: 10px 0 30px 0;
+  	color: rgb(26, 26, 26);
+}
+.h-slide__text {
+	font-size: 1rem;
+  	color: rgb(26, 26, 26);
+  	line-height: 1.5rem;
+  	text-align: center;
+  	margin-bottom: 40px;
+}
+.slick-arrow {
+	position: absolute;
+	font-size: 0;
+	background: transparent url(../img/icons/arrow.png) center center no-repeat;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	display: block;
+	border: none;
+	outline: none;
+	width: 16px;
+	height: 26px;
+	cursor: pointer;
+	z-index: 3;
+	top: calc(50% - 13px);
+	&.slick-next {
+		left: calc(50vw - #{$container/2});
+	}
+	&.slick-prev {
+		right: calc(50vw - #{$container/2});
+		-webkit-transform: rotate(180deg);
+		   -moz-transform: rotate(180deg);
+		    -ms-transform: rotate(180deg);
+		     -o-transform: rotate(180deg);
+		        transform: rotate(180deg);
+	}
+}
+
+@include respond-below(lg) {
+	.h-slider {
+		margin-bottom: 35px;
+	}
+	.h-slide__flag {
+		width: 450px;
+		height: 284px;
+		right: -30px;
+	}
+	.h-slide__flag-text {
+		margin-top: 25px;
+		font-size: 3.6rem;
+		& > span {
+			font-size: 7.2rem;
+		}
+	}
+	.h-slide__marker {
+		width: 125px;
+		height: 125px;
+		left: auto;
+    	right: 350px;
+	}
+	.h-slide__marker-text {
+		font-size: 1.16rem;
+		line-height: 1.5rem;
+		padding: 0 15px;
+	}
+	.h-slide__description {
+		padding: 0 42px;
+    	width: 50%;
+	}
+}
+@include respond-below(md) {
+	.h-slide {
+		background-position: 64% center;
+		overflow: hidden;
+	}
+	.h-slide__flag {
+		left: calc(50% - 225px);
+	}
+	.h-slide__marker {
+		left: calc(50% - 255px)
+	}
+	.h-slide__description {
+		padding: 0 20%;
+    	width: 100%;
+	}
+}
+@include respond-below(sm) {
+	.h-slide__flag {
+		width: 300px;
+		height: 200px;
+		left: calc(50% - 150px);
+	}
+	.h-slide__flag-text {
+		font-size: 2.86rem;
+		margin-top: 10px;
+		& > span {
+			font-size: 5.8rem;
+		}
+	}
+	.h-slide__marker {
+    	top: 120px;
+    	left: calc(50% - 62.5px);
+	}
+	.h-slide__description {
+		padding: 0 10px;
+	}
+}

@@ -1,0 +1,218 @@
+.h-footer {
+	height: 305px;
+	background: #1d1d1d url(../img/footer.png) center top no-repeat;
+	-webkit-background-size: auto;
+	     -o-background-size: auto;
+	        background-size: auto;
+}
+.h-footer__container {
+	@include flex(row, space-between, flex-start);
+	height: 245px;
+	padding-top: 35px;
+}
+.h-footer__logo-block {
+	flex: 0 0 278px;
+	text-align: center;
+}
+.h-footer__logo-text {
+	font-size: 0.92rem;
+  	color: rgb(43, 43, 43);
+  	line-height: 1.25rem;
+  	margin-top: 15px;
+}
+.h-footer__menu-block {
+	flex: 0 0 487px;
+	@include flex(row, center, flex-start);
+}
+.h-footer__menu {
+	margin: 0 12px;
+}
+.h-footer__menu-title {
+  font-size: 1.14rem;
+  line-height: 2.25rem;
+  color: rgb(46, 46, 46);
+  font-weight: 900;
+  text-align: left;
+}
+.h-footer__menu-item:not(.h-footer__menu-title) {
+	padding-left: 16px;
+	position: relative;
+	&:before {
+		content: '>';
+  		font-size: 1rem;
+  		color: rgb(46, 46, 46);
+  		-moz-transform: scale(0.6, 1);
+  		-webkit-transform: scale(0.6, 1);
+  		-ms-transform: scale(0.6, 1);
+  		font-weight: 300;
+  		position: absolute;
+  		left: 0;
+  		top: calc(50% - 7px);
+  	}
+}
+.h-footer__menu-link {
+  font-size: 1rem;
+  color: rgb(46, 46, 46);
+  line-height: 2.229;
+  text-align: left;
+}
+.h-footer__info {
+	flex: 0 0 195px;
+	@include flex(column, flex-start, flex-start)
+}
+.h-footer__app-link {
+	margin-top: 10px;
+}
+.h__apple-app {
+	margin-bottom: 12px;
+}
+.h-footer__subtitle {
+	font-size: 1.14rem;
+  	line-height: 2.25rem;
+  	color: rgb(46, 46, 46);
+  	font-weight: 900;
+  	text-align: left;
+}
+.h-footer__social-block {
+	background: url(../img/socials.png) center center no-repeat;
+  	width: 118px;
+  	height: 18px;
+  	cursor: pointer;
+}
+.h-footer__addresses {
+  	font-size: 1rem;
+  	color: rgb(43, 43, 43);
+  	line-height: 1rem;
+  	margin: 15px 0;
+  	padding-left: 35px;
+  	background: url(../img/location.png) left top no-repeat;
+  	font-weight: 300;
+ 	& > span {
+ 		display: block;
+ 		margin-bottom: 7px;
+ 	} 	
+}
+.h-footer__phone {
+	padding-left: 35px;
+	line-height: 35px;
+	height: 35px;
+	display: block;
+	font-weight: 300;
+  	font-size: 1.14rem;
+  	color: rgb(43, 43, 43);
+	background: url(../img/icons/phone_footer.png) 5px center no-repeat;
+}
+.h-copyright {
+	height: 60px;
+}
+.h-copyright__container {
+	height: 60px;
+	@include flex(row, space-between, center);
+	padding: 0 15px;
+	
+}
+.h-copy-right__text {
+  	font-size: 0.92rem;
+  	color: $white;
+}
+.h-develop__block {
+	@include flex(row, flex-end, center);
+}
+.h-develop__name {
+	font-size: 0.92rem;
+  	color: $white;
+  	text-align: right;
+  	margin-left: 10px;
+}
+@include respond-below(lg) {
+  .h-footer__logo-block {
+    display: none;
+  }
+  .h-footer__menu-block {
+    flex: 0 0 370px;
+  }
+  .h-footer__contacts {
+    flex: 0 0 210px;
+  }
+  .h-footer__info {
+    flex: 0 0 185px
+  }
+}
+@include respond-below(md) {
+  .h-footer {
+    background: #1d1d1d url(../img/footer.png) center top no-repeat;
+    -webkit-background-size: auto 215px;
+    -o-background-size: auto 215px;
+    background-size: auto 215px;
+  }
+  .h-footer__menu-block {
+    display: none;
+  }
+  .h-footer__container {
+    padding: 20px 10px 0 10px;
+    height: 215px;
+  }
+  .h-copyright {
+    height: 90px;
+  }
+  .h-copyright__container {
+    height: 90px;
+  }
+  .h-copy-right__text {
+    order: 1;
+    width: 120px;
+    line-height: 1.25rem;
+    text-align: right;
+  }
+  .h-develop__name {
+    margin-left: 20px;
+    width: 71px;
+    text-align: left;
+    line-height: 1.25rem;
+  }
+}
+@include respond-below(sm) {
+  .h-footer {
+    height: 500px;
+    -webkit-background-size: auto 380px;
+         -o-background-size: auto 380px;
+            background-size: auto 380px;
+  }
+  .h-footer__container {
+    height: 380px;
+    -webkit-flex-direction: column-reverse; 
+        -ms-flex-direction: column-reverse; 
+            flex-direction: column-reverse; 
+    -webkit-align-items: center;
+            align-items: center;
+  }
+  .h-footer__contacts {
+    flex: 0 0 150px;
+  }
+  .h-footer__subtitle {
+    text-align: center;
+  }
+  .h-footer__info {
+    flex: 0 0 200px;
+    -webkit-align-items: center;
+            align-items: center;
+  }
+  .h-copyright {
+    height: 120px;
+  }
+  .h-copyright__container {
+    height: 120px;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-justify-content: space-around;
+            justify-content: space-around;
+  }
+  .h-develop__name {
+    width: auto;
+  }
+  .h-copy-right__text {
+    width: 100%;
+    text-align: center;
+  }
+}

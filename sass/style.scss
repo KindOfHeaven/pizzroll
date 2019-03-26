@@ -1,0 +1,136 @@
+@import "normalize/normalize/import-now";
+@import "modules/reset";
+
+
+@import "modules/fonts";
+@import "modules/mixins";
+@import "modules/variables";
+
+.js-next-step {
+	display: none;
+}
+.h-container {
+	position: relative;
+	max-width: $container;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.h-button {
+	min-width: 82px;
+	padding: 0 10px;
+	display: inline-block;
+	&[data-color="green"] {
+		border: 2px solid $green;
+		&:hover {
+			background: $green;
+		}
+	}
+	&[data-color="orange"] {
+		border: 2px solid $orange;
+		&:hover {
+			background: $orange;
+		}
+	}
+  	border-radius: 7px;
+  	background-color: rgba(0,0,0,0);
+  	height: 33px;
+  	line-height: 31px;
+  	text-align: center;
+  	font-weight: 500;
+  	font-size: 1rem;
+  	color: rgb(31, 29, 29);
+  	@include transition(all, .3s);
+  	
+  	&:hover {
+		color: $white;
+  	}
+}
+
+.h-modal__is-opened {
+	overflow: hidden;
+}
+
+@import "parts/header";
+@import "parts/navigation";
+@import "parts/slider";
+@import "parts/menu";
+@import "parts/products";
+@import "parts/banners";
+@import "parts/content";
+@import "parts/contacts";
+@import "parts/footer";
+@import "parts/breadcrumbs";
+
+// Catalog
+
+@import "parts/catalog/catalog";
+
+// Content 
+
+@import "parts/content/content";
+
+// Cart
+
+@import "parts/cart/cart";
+
+// Thanks
+
+@import "parts/thanks/thanks";
+
+// Sales
+
+@import "parts/sales/sales"; 
+
+// Delivery
+
+@import "parts/delivery/delivery";
+
+// Restaurant 
+
+@import "parts/restaurant/restaurant";
+
+// Cabinet
+
+@import "parts/cabinet/cabinet";
+
+// Modals
+
+@import "parts/modals/present";
+@import "parts/modals/logging";
+@import "parts/modals/cart";
+@import "parts/modals/added";
+@import "parts/modals/product";
+
+@include respond-above(lg) {
+	.-mobile-only {
+		display: none;
+	}
+	.h-menu__icon-svg {
+		display: none;
+	}
+}
+
+@include respond-below(lg) {
+	.-no-lg {
+		display: none;
+	}
+}
+
+@include respond-above(md) {
+	.h-md {
+		display: none;
+	}
+}
+
+@include respond-below(md) {
+	.-no-md {
+		display: none;
+	}	
+}
+
+@include respond-below(sm) {
+	.-no-sm {
+		display: none;
+	}
+}

@@ -1,0 +1,108 @@
+.h-ad__section {
+	height: 140px;
+	margin-bottom: 30px;
+}
+.h-ad__block {
+	height: 140px;
+	padding: 0 43px 0 50px;
+	@include flex(row, space-between, center);
+}
+.h-ad__block[data-type="centered"] {
+	@include flex(row, center, center);
+	& .h-ad__title {
+		text-align: right;
+		padding-right: 15px;
+		position: relative;
+		&:after {
+			content: "";
+			position: absolute;
+			right: 0;
+			top: -10px;
+			background: rgba(0,0,0,0.14);
+			display: block;
+  			width: 1px;
+  			height: 67px;
+		}
+	}
+}
+.h-ad__title {
+	font-size: 1.5rem;
+	font-weight: 900;
+  	color: rgb(42, 42, 42);
+  	text-transform: uppercase;
+  	@include flex(row, flex-start, center);
+  	line-height: 1.75rem;
+  	text-align: left;
+	& > .h-ad__percents {
+ 		font-size: 4.7rem;
+ 		font-weight: 900;
+ 		line-height: 4.7rem;
+ 		float: left;
+		color: $red;
+		margin-right: 15px;
+	}
+}
+.h-ad__combo {
+  	font-size: 3.7rem;
+  	color: $red;
+  	line-height: 2.5rem;
+  	font-weight: 900;
+  	text-align: left;
+  	padding-left: 15px;
+}
+.h-ad__clock {
+	padding-right: 50px;
+ 	font-weight: 300;
+ 	font-size: 1.5rem;
+  	color: rgb(42, 42, 42);
+  	line-height: 1.75rem;
+  	text-align: right;
+  	background: url(../img/icons/big_clock.png) right center no-repeat;
+  	& > span {
+  		font-weight: 700;
+  		display: block;
+  		font-size: 1.5rem;
+  	}
+}
+
+@include respond-below(lg) {
+	.h-ad__clock {
+		display: none;
+	}
+	.h-ad__section {
+		height: 105px;
+	}
+	.h-ad__block {
+		height: 105px;
+		&[data-type="centered"] {
+			background-size: 100% 100%;
+    		background-position: left center;
+    		background-repeat: no-repeat;
+		}
+	}
+}
+@include respond-below(md) {
+	.h-ad__section {
+		padding: 0 10px;
+	}
+	.h-ad__block[data-type="centered"] {
+		background-position: 60% center;
+		-webkit-background-size: auto auto;
+		     -o-background-size: auto auto;
+		        background-size: auto auto;
+	}
+}
+@include respond-below(sm) {
+	.h-ad__block {
+		padding: 0 20px;
+	}
+	.h-ad__title {
+		font-size: 1.2rem;
+		& > .h-ad__percents {
+			font-size: 4.1rem;
+		}
+	}
+	.h-ad__combo {
+		font-size: 2.7rem;
+	}
+}

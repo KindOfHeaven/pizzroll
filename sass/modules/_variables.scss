@@ -1,0 +1,17 @@
+// Colors 
+$green: #94bd00;
+$orange: #ff6700;
+$red: #ff0000;
+$white: #ffffff;
+
+// General
+$font: (family: "Roboto", size: 14px);
+$container: 1170px;
+
+// Responsive
+$breakpoints: (
+  xs: 320px,
+  sm: 480px,
+  md: 768px,
+  lg: 1170px
+);

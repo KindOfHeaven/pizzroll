@@ -1,0 +1,104 @@
+.h-present__bar {
+	position: fixed;
+	width: 6px;
+	height: 350px;
+	top: calc(50vh - 175px);
+	right: 15px;
+	background: #e1e1e1;
+	-webkit-border-radius: 3px;
+	        border-radius: 3px;
+	z-index: 10;
+}
+.h-present__fulling {
+	display: block;
+	height: 91%;
+	-webkit-border-radius: 3px;
+	        border-radius: 3px;
+	width: 6px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	max-width: 100%;
+	max-height: 100%;
+  background: url(../img/icons/circles.png) center bottom no-repeat repeat, -moz-linear-gradient( 90deg, rgb(168,201,1) 0%, rgb(243,217,0) 40%, rgb(244,94,39) 76%, rgb(244,45,58) 98%);
+  background: url(../img/icons/circles.png) center bottom no-repeat repeat, -webkit-linear-gradient( 90deg, rgb(168,201,1) 0%, rgb(243,217,0) 40%, rgb(244,94,39) 76%, rgb(244,45,58) 98%);
+  background: url(../img/icons/circles.png) center bottom no-repeat repeat, -ms-linear-gradient( 90deg, rgb(168,201,1) 0%, rgb(243,217,0) 40%, rgb(244,94,39) 76%, rgb(244,45,58) 98%);
+}
+.h-present__icon {
+	display: block;
+	width: 34px;
+	height: 32px;
+	background: url(../img/icons/present.png) center center no-repeat;
+	position: absolute;
+	left: -45px;
+	bottom: calc(90% - 32px);
+}
+.h-present__bar-block {
+	display: none;
+	padding: 25px 14px 25px 40px;
+	width: 235px;
+	height: 400px;
+	position: fixed;
+	right: 0;
+	top: calc(50% - 200px);
+	background: #FFF;
+	z-index: 9;
+	border-top-left-radius: 16px;
+	border-bottom-left-radius: 16px;
+  	box-shadow: 0px 3px 32px 0px rgba(0, 0, 0, 0.18);
+  	& .h-present__bar {
+  		position: absolute;
+  		left: 20px;
+  		display: block;
+  		top: 25px;
+  	}
+}
+.h-present__title {
+  	font-size: 1.14rem;
+  	font-weight: 500;
+  	color: rgb(32, 32, 32);
+}
+.h-present__text {
+	font-weight: 300;
+	margin: 15px 0;
+  	font-size: 0.93rem;
+  	color: rgb(32, 32, 32);
+  	line-height: 1.231;
+}
+.h-present__block {
+	border: 1px solid $orange;
+  	-webkit-border-radius: 16px;
+          	border-radius: 16px;
+  	width: 173px;
+  	height: 86px;
+  	@include flex(row, center, center);
+  	margin-bottom: 7px;
+}
+.h-present__img {
+	margin-right: 13px;
+}
+.h-present__amount {
+  	font-size: 0.93rem;
+  	font-weight: 400;
+  	color: rgb(53, 53, 53);
+  	margin-right: 13px;
+  	line-height: 1.385;
+  	& span {
+  		font-weight: 500;
+  		color: $orange;
+  		display: block;
+  	}
+}
+.h-cross {
+	position: absolute;
+	right: 12px;
+	top: 12px;
+  	font-size: 1.14rem;
+	display: block;
+	cursor: pointer;
+	z-index: 10;
+  	color: rgb(32, 32, 32);
+  	-moz-transform: scale(1, 0.7);
+  	-webkit-transform: scale(1, 0.7);
+  	-ms-transform: scale(1, 0.7);
+}

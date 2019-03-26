@@ -1,0 +1,44 @@
+.h-added {
+	display: none;
+	-webkit-border-radius: 16px;
+	        border-radius: 16px;
+  	background-color: #fff;
+  	position: absolute;
+  	width: 504px;
+  	height: 209px;
+  	top: calc(50% - 104.5px);
+  	left: calc(50% - 257px);
+  	z-index: 99;
+}
+.h-opacity {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background: #f6f6f7;
+	opacity: .88;
+	top: 0;
+	left: 0;
+	z-index: 98;
+	@include flex(column, center, center);
+}
+.h-added__figure {
+	margin-top: 40px;
+	text-align: center;
+	& img {
+		width: 60px;
+		height: 60px;
+		margin-bottom: 10px;
+	}
+	& figcaption {
+		color: #3a3a3a;
+		font-weight: 500;
+		font-size: 1.57rem;
+	}
+}
+.h-added__text {
+	color: #3a3a3a;
+	font-weight: 300;
+	font-size: 1rem;
+	text-align: center;
+	margin-top: 10px;
+}

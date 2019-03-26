@@ -1,0 +1,76 @@
+.h-thanks__section {
+	margin: 70px 0 200px 0;
+	text-align: center;
+}
+.h-thanks__title {
+  	font-size: 1.86rem;
+  	font-weight: 500;
+  	margin-bottom: 40px;
+  	color: rgb(32, 32, 32);
+}
+.h-thanks__img-block {
+	margin-bottom: 30px;
+}
+.h-thanks__subtitle {
+  	font-size: 1.29rem;
+  	color: rgb(32, 32, 32);
+}
+.h-thanks__text {
+	max-width: 360px;
+	margin: 20px auto;
+}
+.h-thanks__back-button {
+	border: 1px solid $orange;
+	-webkit-border-radius: 6px;
+	        border-radius: 6px;
+	background: url(../img/icons/back.png) 175px center no-repeat;
+	padding-right: 15px;
+	text-align: center;
+	display: block;
+  	width: 205px;
+  	height: 40px;
+  	line-height: 38px;
+  	font-size: 1rem;
+  	color: rgb(32, 32, 32);
+  	margin: 0 auto;
+}
+.h-thanks__recall-block {
+	border: 1px solid $orange;
+	-webkit-border-radius: 6px;
+	        border-radius: 6px;
+	margin: 60px auto 0 auto;
+  	width: 616px;
+  	height: 61px;
+}
+.h-thanks__recall-text {
+	background: #FFF;
+	position: relative;
+	top: -8px;
+	padding: 0 13px;
+	display: inline-block;
+  	font-size: 1rem;
+  	color: rgb(32, 32, 32);
+  	text-align: center;
+}
+.h-thanks__recall-phone {
+	display: block;
+	margin-top: 7px;
+	font-size: 1.57rem;
+	font-weight: 700;
+	color: $orange
+}
+@include respond-below(md) {
+	.h-thanks__recall-block {
+		max-width: 100%;
+		width: auto;
+		margin: 60px 10px 0 10px;
+		height: auto;
+		padding: 10px 0;
+	}
+	.h-thanks__recall-text {
+		position: static;
+	}
+	.h-thanks__recall-phone {
+		margin-top: 15px;
+	}
+}

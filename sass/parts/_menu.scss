@@ -1,0 +1,57 @@
+.h-product-types__section {
+	margin: 25px 0;
+	background: #FFF;
+}
+.h-product-types__menu {
+	height: 150px;
+	width: 100%;
+	@include flex(row, space-between, stretch);
+}
+.h-product-type {
+	width: calc(100%/8);
+	height: 100%;
+	flex: 0 0 calc(100%/8);
+	position: relative;
+	border: 1px solid transparent;
+	@include transition(all, .5s);
+	&:hover {
+		& .h-product-type__name {
+  			font-weight: 500;
+  		}
+		border: 1px solid $orange;
+  	}
+	& > figure {
+		height: 100%;
+		width: 100%;
+		@include flex(column, center, center);
+		text-align: center;
+	}
+	&:not(:last-child):after {
+		content: "";
+		background: rgba(0,0,0,.13);
+  		position: absolute;
+  		right: -1.5px;
+  		top: calc(50% - 53.5px);
+  		width: 1px;
+  		height: 107px;
+  		z-index: 0;
+	}
+}
+.h-product-type__link {
+	@include flex(row, center,center);
+	width: 100%;
+	height: 75px;
+	margin-bottom: 15px;
+}
+.h-product-type__name {
+  	font-size: 1.14rem;
+  	font-weight: 300;
+  	color: rgb(32, 32, 32);
+  	@include transition(all, .3s);
+}
+
+@include respond-below(lg) {
+	.h-product-types__section {
+		display: none;
+	}
+}

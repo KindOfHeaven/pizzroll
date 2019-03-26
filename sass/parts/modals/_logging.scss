@@ -1,0 +1,162 @@
+.h-auth__modal {
+	display: none;
+	width: 335px;
+	height: auto;
+	padding: 25px 25px 30px 25px;
+	position: absolute;
+	background: #FFF;
+  	box-shadow: 0px 3px 32px 0px rgba(0, 0, 0, 0.18);
+  	z-index: 10;
+  	top: 68px;
+  	left: 0;
+  	-webkit-border-radius: 15px;
+  	        border-radius: 15px;
+  	&:after {
+  		width: 0;
+  		height: 0;
+  		border: 12px solid transparent;
+  		content: "";
+  		display: block;
+  		position: absolute;
+  		top: -24px;
+  		left: 25px;
+  		border-bottom: 12px solid #fff;
+  	}
+}
+
+.h-auth-modal__links-block {
+	@include flex(row, flex-start, center);
+	height: 34px;
+	width: 100%;
+}
+.h-auth-modal__link {
+	display: block;
+	height: 34px;
+	line-height: 30px;
+	border: 2px solid transparent;
+	-webkit-border-radius: 17px;
+	        border-radius: 17px;
+	padding: 0 20px;
+	margin-right: 5px;
+  	font-size: 1rem;
+  	color: rgb(58, 58, 58);
+  	font-weight: 500;
+  	@include transition(all, .3s);
+  	&:hover, &[data-state="is-active"] {
+  		border: 2px solid $orange;
+  	}
+}
+
+.h-auth__modal-type {
+	display: none;
+	width: 100%;
+	height: auto;
+}
+.h-auth__modal-title {
+  	font-size: 1.57rem;
+  	font-weight: 500;
+  	margin: 25px 0;
+  	color: rgb(58, 58, 58);
+}
+.h-auth__modal-input {
+	display: block;
+	width: 100%;
+	line-height: 25px;
+  	font-size: 1rem;
+  	color: rgb(58, 58, 58);
+  	& input {
+  		width: 100%;
+  		display: block;
+  		height: 43px;
+  		line-height: 41px;
+  		padding-left: 10px;
+  		background: #FFF;
+  		margin-bottom: 15px;
+  		-webkit-border-radius: 5px;
+  		        border-radius: 5px;
+  		border: 1px solid #cccccc;
+  	}
+}
+.h-auth__modal-button {
+	-webkit-border-radius: 6px;
+	        border-radius: 6px;
+  	background-color: $orange;
+  	padding: 0 20px;
+  	display: inline-block;
+  	height: 45px;
+  	text-align: center;
+  	line-height: 45px;
+  	font-size: 1.28rem;
+  	cursor: pointer;
+  	border: none;
+  	margin-right: 25px;
+  	color: rgb(255, 255, 255);
+}
+.h-auth__modal-reset {
+  	font-size: 0.93rem;
+  	font-weight: 500;
+  	color: rgb(58, 58, 58);
+  	text-decoration: underline;
+  	line-height: 45px;
+}
+.h-auth__modal-info {
+	padding-left: 35px;
+	background: url(../img/icons/point__colored.png) 10px top no-repeat;
+	-webkit-background-size: 15px 15px;
+	     -o-background-size: 15px 15px;
+	        background-size: 15px 15px;
+  	font-size: 0.93rem;
+  	color: rgb(58, 58, 58);
+  	line-height: 1.25rem;
+  	margin: 25px 0;
+}
+
+.h-modal__grey-cross {
+  height: 20px;
+  width: 20px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  background: #bcbcbc;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.14rem;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  text-transform: lowercase;
+}
+
+@include respond-below(lg) {
+	.h-auth__modal.-right {
+		z-index: 11;
+		right: 15px;
+		left: auto;
+		&:after {
+			right: 25px;
+			left: auto
+		}
+	}
+}
+@include respond-below(md) {
+	.h-auth__modal.-right {
+		top: 110px
+	}
+}
+@include respond-below(sm) {
+	.h-auth__modal.-right {
+		top: 68px;
+  		left: 0;
+  		&:after {
+  			left: 25px
+  		}
+	}
+  .h-auth__modal {
+    z-index: 11;
+    width: 100%;
+  }
+  .h-auth__modal-button {
+    margin-right: 15px;
+  }
+}

@@ -1,0 +1,33 @@
+.h-breadcrumbs__block {
+  margin: 25px 0 10px 0;
+}
+.h-breadcrumb__item {
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	font-weight: 300;
+  	font-size: 0.93rem;
+  	margin-right: 30px;
+  	position: relative;
+  	color: rgb(122, 122, 122);
+  	@include transition(all, .3s);
+  	&:not(:last-child):after {
+  		content: ">";
+  		font-size: 0.93rem;
+  		position: absolute;
+  		color: $orange;
+  		font-weight: 300;
+  		right: -18px;
+  		bottom: 0;
+  	}
+  	&:last-child, &:hover {
+  		color: #393939;
+  		font-weight: 400;
+  	}
+} 
+
+@include respond-below(lg) {
+  .h-breadcrumbs__block {
+    padding-left: 15px;
+  }
+}
